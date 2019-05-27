@@ -24,7 +24,8 @@ namespace QuickSort
                 end = stack.Pop();
                 start = stack.Pop();
 
-                int nextPivot = Partition(input, start, end);
+                int pivot = input[end];
+                int nextPivot = Partition(input, start, end, pivot);
 
                 if (nextPivot - 1 > start)
                 {
@@ -40,14 +41,13 @@ namespace QuickSort
             }
         }
 
-        private int Partition(int[] input, int start, int end)
+        private int Partition(int[] input, int start, int end, int pivot)
         {
-            int x = input[end];
             int i = (start - 1);
 
             for (int j = start; j <= end - 1; ++j)
             {
-                if (input[j] <= x)
+                if (input[j] <= pivot)
                 {
                     ++i;
                     Swap(input, i, j);
