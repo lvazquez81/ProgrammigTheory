@@ -4,14 +4,15 @@ using QuickSort;
 namespace Tests
 {
     [TestClass]
-    public class BasicTests
+    [TestCategory("Iterative")]
+    public class IterativeTests
     {
         private IQuickSort _sorter;
 
         [TestInitialize]
         public void TestSetup()
         {
-            _sorter = new RecursiveQuickSort();
+            _sorter = new IterativeQuickSort();
         }
 
         [TestMethod]

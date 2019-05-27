@@ -1,6 +1,6 @@
 ﻿namespace QuickSort
 {
-    public class RecursiveQuickSort : IQuickSort
+    public class RecursiveQuickSort : Common, IQuickSort
     {
         public void Sort(int[] input)
         {
@@ -44,13 +44,6 @@
             }
 
             return start;
-        }
-
-        private static void Swap(int[] input, int start, int end)
-        {
-            int tmp = input[start];
-            input[start] = input[end];
-            input[end] = tmp;
         }
     }
 }
