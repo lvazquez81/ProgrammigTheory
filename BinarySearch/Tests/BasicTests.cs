@@ -41,5 +41,18 @@ namespace Tests
 
             Assert.AreEqual(-1, result);
         }
+
+
+        [TestMethod]
+        public void OnUnsortedArray_returnsNotFound()
+        {
+            int[] input = new int[] { 3, 1, 2, 4, 5};
+
+            IBinarySearch search = new MyBinarySearch();
+
+            int result = search.Find(input, 3);
+
+            Assert.AreEqual(-1, result);
+        }
     }
 }
